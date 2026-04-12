@@ -5,6 +5,6 @@ build-job:
   stage: build
   script:
     - echo "Starting build process"
-    - docker --version
-    - echo "Simulating Docker build"
-    - echo "Build completed successfully"
+    - echo "Checking project files"
+    - ls -la
+    - echo "Build simulation successful"
