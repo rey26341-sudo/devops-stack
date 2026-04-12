@@ -1,0 +1,10 @@
+stages:
+  - build
+
+build-job:
+  stage: build
+  script:
+    - echo "Starting build process"
+    - docker --version
+    - echo "Simulating Docker build"
+    - echo "Build completed successfully"
