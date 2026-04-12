@@ -14,3 +14,10 @@ Terraform | Ansible | Nginx | Jenkins | Bash | GCP (concept)
 ## Outcome
 Demonstrates real-world DevOps workflow including:
 IaC + Automation + CI/CD + Security
+## Live Output
+
+### Application Running
+![App](screenshots/app-output.png)
+
+### Docker Container
+![Docker](screenshots/docker-running.png)
