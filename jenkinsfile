@@ -1,0 +1,31 @@
+pipeline {
+  agent any
+
+  stages {
+
+    stage('Checkout') {
+      steps {
+        git 'https://github.com/rey26341-sudo/devops-stack.git'
+      }
+    }
+
+    stage('Build Image') {
+      steps {
+        sh 'docker build -t fintech-app:latest .'
+      }
+    }
+
+    stage('Run Tests') {
+      steps {
+        sh 'echo "Add tests here"'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sh 'docker compose up -d'
+      }
+    }
+
+  }
+}

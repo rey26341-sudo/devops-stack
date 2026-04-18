@@ -1,0 +1,17 @@
+name: Bash Script Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-bash:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Check Bash Syntax
+        run: |
+          find . -name "*.sh" -exec bash -n {} \;
