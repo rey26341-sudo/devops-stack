@@ -21,3 +21,24 @@ IaC + Automation + CI/CD + Security
 
 ### Docker Container
 ![Docker](screenshots/docker-running.png)
+## CI/CD Pipeline Flow
+
+```text
+1. Developer pushes code to GitHub
+
+2. GitHub webhook triggers Jenkins pipeline
+
+3. Jenkins:
+   - Pulls latest code
+   - Builds Docker image
+   - Runs tests
+   - Tags image
+
+4. Jenkins deploys image:
+   - Docker server (docker compose) OR
+   - Kubernetes (kubectl/Helm)
+
+5. Nginx exposes application
+
+6. Monitoring verifies health
+```
