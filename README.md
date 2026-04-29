@@ -87,6 +87,17 @@ devops-stack/
 
 ---
 
+Issues Debugged & Fixed
+
+| Problem | Root Cause | Fix |
+|---|---|---|
+| Nginx 502 Bad Gateway | Config proxied to `localhost:3000` (no backend) | Removed upstream proxy |
+| Bash entrypoint error | Unexpected newline token | Fixed script formatting |
+| GitLab CI: `docker not found` | Shared runners lack Docker CLI | Removed docker commands from job |
+| GitHub auth failure | Password auth disabled | Switched to Personal Access Token |
+
+
+
 ## 🛠️ Tools Used
 
 | Tool | Purpose | Status |
@@ -162,6 +173,16 @@ Developer pushes code to GitHub / GitLab
 │   • Served at localhost:8080    │
 └─────────────────────────────────┘
 ---
+
+## upcoming..
+- [ ] Ansible playbook for server auto-configuration
+- [ ] Terraform scripts for GCP VM provisioning  
+- [ ] Jenkins self-hosted pipeline with Docker build + push
+- [ ] Push Docker image to Docker Hub via CI
+- [ ] Deploy to Kubernetes with Helm
+- [ ] Prometheus + Grafana monitoring
+
+```
 ---
 
 ## 👤 Author
