@@ -87,16 +87,20 @@ devops-stack/
 
 ---
 
-Issues Debugged & Fixed
+## 🐛 Real Debugging Done
 
-| Problem | Root Cause | Fix |
-|---|---|---|
-| Nginx 502 Bad Gateway | Config proxied to `localhost:3000` (no backend) | Removed upstream proxy |
-| Bash entrypoint error | Unexpected newline token | Fixed script formatting |
-| GitLab CI: `docker not found` | Shared runners lack Docker CLI | Removed docker commands from job |
-| GitHub auth failure | Password auth disabled | Switched to Personal Access Token |
+| Problem | Fix |
+|---|---|
+| Nginx 502 Bad Gateway | Removed broken upstream proxy config |
+| GitLab CI docker not found | Removed Docker dependency from shared runner job |
+| GitHub auth failure | Switched from password to Personal Access Token |
+| Bash entrypoint syntax error | Fixed newline formatting in entrypoint script |
 
-
+## 📋 What's Next
+- [ ] Ansible playbook for server config automation
+- [ ] Terraform for GCP VM provisioning
+- [ ] Jenkins self-hosted pipeline
+- [ ] Kubernetes deployment with Helm
 
 ## 🛠️ Tools Used
 
@@ -173,16 +177,6 @@ Developer pushes code to GitHub / GitLab
 │   • Served at localhost:8080    │
 └─────────────────────────────────┘
 ---
-
-## upcoming..
-- [ ] Ansible playbook for server auto-configuration
-- [ ] Terraform scripts for GCP VM provisioning  
-- [ ] Jenkins self-hosted pipeline with Docker build + push
-- [ ] Push Docker image to Docker Hub via CI
-- [ ] Deploy to Kubernetes with Helm
-- [ ] Prometheus + Grafana monitoring
-
-```
 ---
 
 ## 👤 Author
@@ -191,6 +185,3 @@ Developer pushes code to GitHub / GitLab
 📍 Tiruchirappalli, Tamil Nadu  
 🔗 [GitLab](https://gitlab.com/rengu26341) · [GitHub](https://github.com/rey26341-sudo)
 
-
-
-> *"AI usage is not cheating — knowing what to ask and understanding the output is the real skill."*
