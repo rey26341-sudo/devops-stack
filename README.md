@@ -18,7 +18,6 @@ A hands-on DevOps project built during an internship to practice real-world work
 | `devops-nginx` image · port 8080→80 | "Hello from DevOps Project 🚀" |
 <img width="1920" height="1020" alt="2026-04-12 (19)" src="https://github.com/user-attachments/assets/ebe50071-6bab-42d2-bc10-6c79523439e7" />
 
-
 > Nginx is serving a static page from inside a Docker container on WSL2 Ubuntu.
 
 ---
@@ -32,26 +31,29 @@ A hands-on DevOps project built during an internship to practice real-world work
 - Debugged and fixed a **502 Bad Gateway** error (nginx was proxying to a non-existent upstream on port 3000)
 - Fixed a **bash entrypoint syntax error** (`unexpected token 'newline'`)
 - Successfully ran container: `docker run -d -p 8080:80 devops-nginx`
-<img width="1920" height="1020" alt="2026-04-12 (22)" src="https://github.com/user-attachments/assets/6534868e-8d56-433d-af31-b172660c9df6" />
+  <img width="1920" height="1020" alt="2026-04-12 (22)" src="https://github.com/user-attachments/assets/6534868e-8d56-433d-af31-b172660c9df6" />
 
 ### ⚙️ GitLab CI Pipeline
 - Created `.gitlab-ci.yml` with a `build` stage and `build-job`
 - First run **failed**: `docker: command not found` on GitLab shared runners
-- <img width="1920" height="1020" alt="2026-04-12 (27)" src="https://github.com/user-attachments/assets/4f4bc54e-14f2-423a-9c87-9cdb23aa5962" />
+  <img width="1920" height="1020" alt="2026-04-12 (27)" src="https://github.com/user-attachments/assets/4f4bc54e-14f2-423a-9c87-9cdb23aa5962" />
+
   <img width="1920" height="1020" alt="2026-04-12 (43)" src="https://github.com/user-attachments/assets/fadf1c8f-e4fa-46f2-876f-01f52710fffc" />
 
 - Fixed by removing Docker dependency from the pipeline job
 - Second run **passed** (Pipeline #2447320552, 30s) — verified project files, echoed build messages
-- <img width="1920" height="1020" alt="2026-04-12 (28)" src="https://github.com/user-attachments/assets/d3f24f88-d387-482a-a0b3-1f38c5a03640" />
+  <img width="1920" height="1020" alt="2026-04-12 (28)" src="https://github.com/user-attachments/assets/d3f24f88-d387-482a-a0b3-1f38c5a03640" />
+
   <img width="1920" height="1020" alt="2026-04-13 (2)" src="https://github.com/user-attachments/assets/6e11283d-970c-4c91-ac96-36a3f4f0c3f7" />
 - Repository: `Rengu / devops-stack` on GitLab
-- <img width="1920" height="1020" alt="2026-04-12 (26)" src="https://github.com/user-attachments/assets/b101d8b4-06c9-494b-ac5a-061b7ef11c34" />
+  <img width="1920" height="1020" alt="2026-04-12 (26)" src="https://github.com/user-attachments/assets/b101d8b4-06c9-494b-ac5a-061b7ef11c34" />
 
 
 ### 🐙 GitHub Actions
 - Added `bash-check.yml` workflow with a `test-bash` job
-- <img width="1920" height="1020" alt="2026-04-18 (9)" src="https://github.com/user-attachments/assets/8336a761-242e-4b42-baf3-8d338c0ec30a" />
- <img width="1920" height="1020" alt="2026-04-18 (13)" src="https://github.com/user-attachments/assets/14514962-2769-41c0-968c-65bcb3cbcdd8" />
+  <img width="1920" height="1020" alt="2026-04-18 (9)" src="https://github.com/user-attachments/assets/8336a761-242e-4b42-baf3-8d338c0ec30a" />
+
+  <img width="1920" height="1020" alt="2026-04-18 (13)" src="https://github.com/user-attachments/assets/14514962-2769-41c0-968c-65bcb3cbcdd8" />
 
 
 - Triggered on every `push` to `main`
@@ -61,7 +63,8 @@ A hands-on DevOps project built during an internship to practice real-world work
 ### 🔀 Dual Remote Git Setup
 - Configured two remotes: `origin` (GitLab) and `github` (GitHub)
 - Push to both simultaneously: `git push && git push github main`
-- <img width="1920" height="1020" alt="2026-04-12" src="https://github.com/user-attachments/assets/1fb9271c-8a0c-42ea-8c02-68f2c47d3735" />
+
+  <img width="1920" height="1020" alt="2026-04-12" src="https://github.com/user-attachments/assets/1fb9271c-8a0c-42ea-8c02-68f2c47d3735" />
 
 
 ---
@@ -158,10 +161,8 @@ Developer pushes code to GitHub / GitLab
 │   • nginx:alpine base           │
 │   • Served at localhost:8080    │
 └─────────────────────────────────┘
-
-
 ---
-
+---
 
 ## 👤 Author
 
@@ -169,6 +170,6 @@ Developer pushes code to GitHub / GitLab
 📍 Tiruchirappalli, Tamil Nadu  
 🔗 [GitLab](https://gitlab.com/rengu26341) · [GitHub](https://github.com/rey26341-sudo)
 
----
+
 
 > *"AI usage is not cheating — knowing what to ask and understanding the output is the real skill."*
